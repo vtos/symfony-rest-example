@@ -6,3 +6,4 @@ services:
       - '8080:8000'
     volumes:
       - .:/usr/apps/restexample
+    command: [sh, -c, "composer install && php -S 0.0.0.0:8000 -t /usr/apps/restexample/public"]

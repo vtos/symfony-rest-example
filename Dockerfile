@@ -13,5 +13,3 @@ RUN apt-get update \
     && sync \
     && install-php-extensions zip \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
-
-CMD ["php", "-S", "0.0.0.0:8000", "-t", "/usr/apps/restexample/public"]
